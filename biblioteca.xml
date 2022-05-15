@@ -47,7 +47,7 @@
 
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
   <documentos>
-    <libros id="L">
+    <libros id="L-0000">
         <libro tipo_clase="novela" número_páginas="0">
            <título_libro></título_libro>
            <capítulos>
@@ -82,7 +82,7 @@
             <sinopsis></sinopsis>
         </libro>
     </libros>
-    <revistas id="P">
+    <revistas id="R">
         <revista tipo_clase="informática" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
@@ -134,7 +134,7 @@
             </secciones_revista>
         </revista>
     </revistas>
-    <periódicos id="R">
+    <periódicos id="P-0000">
         <periódico tipo_clase="nacionales" fecha_publicación="1111-01-01">
             <secciones_periódico>
                 <sección_periódico tipo_sección="económica">
