@@ -46,7 +46,7 @@
 
 
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
-<documentos>
+  <documentos>
     <libros id="L">
         <libro tipo_clase="novela" número_páginas="">
            <título_libro></título_libro>
@@ -154,5 +154,5 @@
             <índice_periódico></índice_periódico>
         </periódico>
     </periódicos>
-</documentos>
+  </documentos>
 </biblioteca>
