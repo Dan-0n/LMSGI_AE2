@@ -59,7 +59,7 @@
            <índice_libro></índice_libro>
            <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="infantil" número_páginas="">
+        <libro tipo_clase="infantil" número_páginas="0">
             <título_libro></título_libro>
             <capítulos>
                 <capítulo número_páginas="0">
