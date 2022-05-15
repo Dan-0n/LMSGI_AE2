@@ -48,10 +48,10 @@
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
   <documentos>
     <libros id="L">
-        <libro tipo_clase="novela" número_páginas="">
+        <libro tipo_clase="novela" número_páginas="0">
            <título_libro></título_libro>
            <capítulos>
-               <capítulo número_páginas="">
+               <capítulo número_páginas="0">
                    <título_capítulo></título_capítulo>
                    <contenido_capítulo enlace=""></contenido_capítulo> 
                 </capítulo>
@@ -62,7 +62,7 @@
         <libro tipo_clase="infantil" número_páginas="">
             <título_libro></título_libro>
             <capítulos>
-                <capítulo número_páginas="">
+                <capítulo número_páginas="0">
                     <título_capítulo></título_capítulo>
                     <contenido_capítulo enlace=""></contenido_capítulo> 
                  </capítulo>
@@ -70,10 +70,10 @@
             <índice_libro></índice_libro>
             <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="didáctico" número_páginas="">
+        <libro tipo_clase="didáctico" número_páginas="0">
             <título_libro></título_libro>
             <capítulos>
-                <capítulo número_páginas="">
+                <capítulo número_páginas="0">
                     <título_capítulo></título_capítulo>
                     <contenido_capítulo enlace=""></contenido_capítulo> 
                  </capítulo>
@@ -83,59 +83,59 @@
         </libro>
     </libros>
     <revistas id="P">
-        <revista tipo_clase="informática" número_páginas="">
+        <revista tipo_clase="informática" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
             <secciones_revista>
-                <sección_revista número_páginas="">
+                <sección_revista número_páginas="0">
                     <contenido_revista enlace=""></contenido_revista>
                 </sección_revista>
             </secciones_revista>
         </revista> 
-        <revista tipo_clase="corazón" número_páginas="">
+        <revista tipo_clase="corazón" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
             <secciones_revista>
-                <sección_revista número_páginas="">
+                <sección_revista número_páginas="0">
                     <contenido_revista enlace=""></contenido_revista>
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="coches" número_páginas="">
+        <revista tipo_clase="coches" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
             <secciones_revista>
-                <sección_revista número_páginas="">
+                <sección_revista número_páginas="0">
                     <contenido_revista enlace=""></contenido_revista>
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="investigación" número_páginas="">
+        <revista tipo_clase="investigación" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
             <secciones_revista>
-                <sección_revista número_páginas="">
+                <sección_revista número_páginas="0">
                     <contenido_revista enlace=""></contenido_revista>
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="otras" número_páginas="">
+        <revista tipo_clase="otras" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
             <secciones_revista>
-                <sección_revista número_páginas="">
+                <sección_revista número_páginas="0">
                     <contenido_revista enlace=""></contenido_revista>
                 </sección_revista>
             </secciones_revista>
         </revista>
     </revistas>
     <periódicos id="R">
-        <periódico tipo_clase="nacionales" fecha_publicación="">
+        <periódico tipo_clase="nacionales" fecha_publicación="1111-01-01">
             <secciones_periódico>
                 <sección_periódico tipo_sección="económica">
                     <artículo autor=""></artículo>
@@ -144,7 +144,7 @@
             </secciones_periódico>
             <índice_periódico></índice_periódico>
         </periódico>
-        <periódico tipo_clase="internacionales" fecha_publicación="">
+        <periódico tipo_clase="internacionales" fecha_publicación="1111-01-01">
             <secciones_periódico>
                 <sección_periódico tipo_sección="económica">
                     <artículo autor=""></artículo>
