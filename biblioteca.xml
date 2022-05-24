@@ -3,9 +3,9 @@
 <!ELEMENT biblioteca (documentos+)>
 <!ELEMENT documentos (libros,revistas,periódicos)>
 <!ELEMENT libros (libro+)>
-<!ATTLIST libros id ID #REQUIRED>
 <!ELEMENT libro (título_libro,capítulos,índice_libro,sinopsis)>
-<!ATTLIST libro tipo_clase CDATA #REQUIRED>
+<!ATTLIST libro id ID #REQUIRED>
+<!ATTLIST libro tipo_clase (novela|infantil|didáctico) #REQUIRED>
 <!ATTLIST libro número_páginas CDATA #REQUIRED>
 <!ELEMENT título_libro (#PCDATA)>
 <!ELEMENT capítulos (capítulo+)>
@@ -17,9 +17,9 @@
 <!ELEMENT índice_libro (#PCDATA)>
 <!ELEMENT sinopsis (#PCDATA)>
 <!ELEMENT revistas (revista+)>
-<!ATTLIST revistas id ID #REQUIRED>
 <!ELEMENT revista (título_revista,número,índice_revista,secciones_revista)>
-<!ATTLIST revista tipo_clase CDATA #REQUIRED>
+<!ATTLIST revista id ID #REQUIRED>
+<!ATTLIST revista tipo_clase (informática|corazón|coches|investigación|otras) #REQUIRED>
 <!ATTLIST revista número_páginas CDATA #REQUIRED>
 <!ELEMENT título_revista (#PCDATA)>
 <!ELEMENT número (#PCDATA)>
@@ -30,25 +30,26 @@
 <!ELEMENT contenido_revista (#PCDATA)>
 <!ATTLIST contenido_revista enlace CDATA #REQUIRED>
 <!ELEMENT periódicos (periódico+)>
-<!ATTLIST periódicos id ID #REQUIRED>
 <!ELEMENT periódico (secciones_periódico,índice_periódico)>
-<!ATTLIST periódico tipo_clase CDATA #REQUIRED>
+<!ATTLIST periódicos id ID #REQUIRED>
+<!ATTLIST periódico tipo_clase (nacional|internacional) #REQUIRED>
 <!ATTLIST periódico fecha_publicación CDATA #REQUIRED>
 <!ELEMENT secciones_periódico (sección_periódico+)>
 <!ELEMENT sección_periódico (artículo,contenido_periódico)>
-<!ATTLIST sección_periódico tipo_sección CDATA #REQUIRED>
+<!ATTLIST sección_periódico tipo_sección (económica|opinión|deportes|nacional|internacional) #REQUIRED>
 <!ELEMENT artículo (#PCDATA)>
 <!ATTLIST artículo autor CDATA #REQUIRED>
-<!ELEMENT contenido_periódico (#PCDATA)>
-<!ATTLIST contenido_periódico información CDATA #REQUIRED>
+<!ATTLIST artículo num CDATA #REQUIRED>
+<!ELEMENT contenido_artículo (#PCDATA)>
+<!ATTLIST contenido_artículo información CDATA #REQUIRED>
 <!ELEMENT índice_periódico (#PCDATA)>
 ]>
 
 
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
   <documentos>
-    <libros id="L-0000">
-        <libro tipo_clase="novela" número_páginas="0">
+    <libros>
+        <libro id="L0001" tipo_clase="novela" número_páginas="0">
            <título_libro></título_libro>
            <capítulos>
                <capítulo número_páginas="0">
@@ -59,7 +60,7 @@
            <índice_libro></índice_libro>
            <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="infantil" número_páginas="0">
+        <libro id="L0002" tipo_clase="infantil" número_páginas="0">
             <título_libro></título_libro>
             <capítulos>
                 <capítulo número_páginas="0">
@@ -70,7 +71,7 @@
             <índice_libro></índice_libro>
             <sinopsis></sinopsis>
         </libro>
-        <libro tipo_clase="didáctico" número_páginas="0">
+        <libro id="L0003" tipo_clase="didáctico" número_páginas="0">
             <título_libro></título_libro>
             <capítulos>
                 <capítulo número_páginas="0">
@@ -82,8 +83,8 @@
             <sinopsis></sinopsis>
         </libro>
     </libros>
-    <revistas id="R">
-        <revista tipo_clase="informática" número_páginas="0">
+    <revistas>
+        <revista id="R0001" tipo_clase="informática" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
@@ -93,7 +94,7 @@
                 </sección_revista>
             </secciones_revista>
         </revista> 
-        <revista tipo_clase="corazón" número_páginas="0">
+        <revista id="R0002" tipo_clase="corazón" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
@@ -103,7 +104,7 @@
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="coches" número_páginas="0">
+        <revista id="R0003" tipo_clase="coches" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
@@ -113,7 +114,7 @@
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="investigación" número_páginas="0">
+        <revista id="R0004" tipo_clase="investigación" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
@@ -123,7 +124,7 @@
                 </sección_revista>
             </secciones_revista>
         </revista>
-        <revista tipo_clase="otras" número_páginas="0">
+        <revista id="R0005" tipo_clase="otras" número_páginas="0">
             <título_revista></título_revista>
             <número></número>
             <índice_revista></índice_revista>
@@ -134,22 +135,94 @@
             </secciones_revista>
         </revista>
     </revistas>
-    <periódicos id="P-0000">
-        <periódico tipo_clase="nacionales" fecha_publicación="1111-01-01">
+    <periódicos>
+        <periódico id="P0001" tipo_clase="nacionales" fecha_publicación="1111-01-01">
             <secciones_periódico>
                 <sección_periódico tipo_sección="económica">
-                    <artículo autor=""></artículo>
-                    <contenido_periódico información=""></contenido_periódico>
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
                 </sección_periódico>
+                <sección_periódico tipo_sección="opinión">
+                   <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="deportes">
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="nacional">
+                    <<artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="internacional">
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                 </sección_periódico>
             </secciones_periódico>
             <índice_periódico></índice_periódico>
         </periódico>
-        <periódico tipo_clase="internacionales" fecha_publicación="1111-01-01">
+        <periódico id="P0002" tipo_clase="internacionales" fecha_publicación="1111-01-01">
             <secciones_periódico>
                 <sección_periódico tipo_sección="económica">
-                    <artículo autor=""></artículo>
-                    <contenido_periódico información=""></contenido_periódico>
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
                 </sección_periódico>
+                <sección_periódico tipo_sección="opinión">
+                   <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="deportes">
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="nacional">
+                    <<artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                </sección_periódico>
+                <sección_periódico tipo_sección="internacional">
+                    <artículo autor="" num="1">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                    <artículo autor="" num="2">
+                      <contenido_artículo información=""></contenido_artículo>
+                    </artículo>
+                 </sección_periódico>
             </secciones_periódico>
             <índice_periódico></índice_periódico>
         </periódico>
