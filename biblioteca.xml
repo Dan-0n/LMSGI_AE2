@@ -208,7 +208,7 @@
                     </artículo>
                 </sección_periódico>
                 <sección_periódico tipo_sección="nacional">
-                    <<artículo autor="" num="1">
+                    <artículo autor="" num="1">
                       <contenido_artículo información=""></contenido_artículo>
                     </artículo>
                     <artículo autor="" num="2">
