@@ -35,14 +35,19 @@
                           <xs:element name="índice_libro" />
                           <xs:element name="sinopsis" />
                         </xs:sequence>
-                        <xs:attribute name="tipo_clase" type="xs:string" use="required" />
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="tipo_clase" type="xs:string" use="required">
+                        <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="novela"></xs:enumeration>
+                            <xs:enumeration value="infantil"></xs:enumeration>
+                            <xs:enumeration value="didactico"></xs:enumeration>
+                            </xs:restriction>
+                         </xs:simpleType>
+                         </xs:attribute> 
                         <xs:attribute name="número_páginas" type="xs:integer" use="required" />
                       </xs:complexType>
                     </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="id" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
               <xs:element name="revistas">
                 <xs:complexType>
                   <xs:sequence>
@@ -71,14 +76,21 @@
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="tipo_clase" type="xs:string" use="required" />
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="tipo_clase" type="xs:string" use="required">
+                        <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="informática"></xs:enumeration>
+                            <xs:enumeration value="corazón"></xs:enumeration>
+                            <xs:enumeration value="coches"></xs:enumeration>
+                            <xs:enumeration value="investigación"></xs:enumeration>
+                            <xs:enumeration value="otras"></xs:enumeration>
+                            </xs:restriction>
+                         </xs:simpleType>
+                         </xs:attribute> 
                         <xs:attribute name="número_páginas" type="xs:integer" use="required" />
                       </xs:complexType>
                     </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="id" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
               <xs:element name="periódicos">
                 <xs:complexType>
                   <xs:sequence>
@@ -105,7 +117,17 @@
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="tipo_sección" type="xs:string" use="required" />
+                                    <xs:attribute name="tipo_sección" type="xs:string" use="required">
+                                      <xs:simpleType>
+                                       <xs:restriction base="xs:string">
+                                         <xs:enumeration value="económica"></xs:enumeration>
+                                         <xs:enumeration value="opinión"></xs:enumeration>
+                                         <xs:enumeration value="deportes"></xs:enumeration>
+                                         <xs:enumeration value="nacional"></xs:enumeration>
+                                         <xs:enumeration value="internacional"></xs:enumeration>
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute> 
                                   </xs:complexType>
                                 </xs:element>
                               </xs:sequence>
@@ -114,7 +136,14 @@
                           <xs:element name="índice_periódico" />
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:string" use="required" />
-                        <xs:attribute name="tipo_clase" type="xs:string" use="required" />
+                        <xs:attribute name="tipo_clase" type="xs:string" use="required">
+                         <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="nacional"></xs:enumeration>
+                            <xs:enumeration value="internacional"></xs:enumeration>
+                            </xs:restriction>
+                         </xs:simpleType>
+                         </xs:attribute> 
                         <xs:attribute name="fecha_publicación" type="xs:date" use="required" />
                       </xs:complexType>
                     </xs:element>
