@@ -88,17 +88,20 @@
                           <xs:element name="secciones_periódico">
                             <xs:complexType>
                               <xs:sequence>
-                                <xs:element name="sección_periódico">
+                                <xs:element maxOccurs="unbounded" name="sección_periódico">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element name="artículo">
+                                      <xs:element maxOccurs="unbounded" name="artículo">
                                         <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="contenido_artículo">
+                                              <xs:complexType>
+                                                <xs:attribute name="información" type="xs:string" use="required" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
                                           <xs:attribute name="autor" type="xs:string" use="required" />
-                                        </xs:complexType>
-                                      </xs:element>
-                                      <xs:element name="contenido_periódico">
-                                        <xs:complexType>
-                                          <xs:attribute name="información" type="xs:string" use="required" />
+                                          <xs:attribute name="num" type="xs:integer" use="required" />
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
@@ -110,12 +113,12 @@
                           </xs:element>
                           <xs:element name="índice_periódico" />
                         </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
                         <xs:attribute name="tipo_clase" type="xs:string" use="required" />
                         <xs:attribute name="fecha_publicación" type="xs:date" use="required" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
-                  <xs:attribute name="id" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
